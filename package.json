@@ -4,8 +4,8 @@
   "description": "Tamkang University Unoffcial OAuth2 Server. (Under Development)",
   "scripts": {
     "lint": "eslint . --ext .js",
-    "dev": "cross-env NODE_ENV=development node index",
-    "start": "cross-env NODE_ENV=production node index"
+    "dev": "cross-env NODE_ENV=development node index | bunyan -o short",
+    "start": "cross-env NODE_ENV=production node index | bunyan -o short"
   },
   "main": "index.js",
   "author": "yckao",
