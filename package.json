@@ -2,6 +2,9 @@
   "name": "TKU-OAuth2-Server",
   "version": "0.0.1",
   "description": "Tamkang University Unoffcial OAuth2 Server.",
+  "scripts": {
+    "lint": "eslint . --ext .js"
+  },
   "main": "index.js",
   "author": "yckao",
   "license": "MIT",
