@@ -1,7 +1,7 @@
 {
   "name": "TKU-OAuth2-Server",
   "version": "0.0.1",
-  "description": "Tamkang University Unoffcial OAuth2 Server.",
+  "description": "Tamkang University Unoffcial OAuth2 Server. (Under Development)",
   "scripts": {
     "lint": "eslint . --ext .js"
   },
