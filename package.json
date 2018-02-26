@@ -22,9 +22,11 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.5",
     "oauth2-server": "^3.0.0",
+    "randomatic": "^3.0.0",
     "request": "^2.83.0",
     "sequelize": "^4.34.0",
-    "tabletojson": "^0.7.1"
+    "tabletojson": "^0.7.1",
+    "uuid": "^3.2.1"
   },
   "devDependencies": {
     "cross-env": "^5.1.3",
