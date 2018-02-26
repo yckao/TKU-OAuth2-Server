@@ -15,5 +15,12 @@
     "request": "^2.83.0",
     "sequelize": "^4.34.0",
     "tabletojson": "^0.7.1"
+  },
+  "devDependencies": {
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
   }
 }
