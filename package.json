@@ -11,9 +11,13 @@
   "private": false,
   "dependencies": {
     "bluebird": "^3.5.1",
+    "bunyan": "^1.8.12",
     "cheerio": "^1.0.0-rc.2",
     "cookie": "^0.3.1",
     "ioredis": "^3.2.2",
+    "koa": "^2.5.0",
+    "koa-body": "^2.5.0",
+    "koa-router": "^7.4.0",
     "oauth2-server": "^3.0.0",
     "request": "^2.83.0",
     "sequelize": "^4.34.0",
