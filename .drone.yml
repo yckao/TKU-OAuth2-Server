@@ -1,3 +1,8 @@
+cache:
+  mount:
+    - node_modules
+    - .git
+    
 pipeline:
   lint:
     image: node:9-slim
