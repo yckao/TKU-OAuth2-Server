@@ -2,4 +2,5 @@ pipeline:
   lint:
     image: node:9-slim
     commands:
+      - yarn install
       - npm run lint
