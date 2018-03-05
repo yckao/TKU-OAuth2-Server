@@ -5,6 +5,6 @@ pipeline:
     commands:
       - yarn install
       - npm run lint
-    mount:
+    volumes:
       - ./node_modules
     
