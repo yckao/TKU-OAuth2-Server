@@ -20,7 +20,7 @@
     "date-fns": "^1.29.0",
     "ioredis": "^3.2.2",
     "koa": "^2.5.0",
-    "koa-body": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
     "koa-router": "^7.4.0",
     "lodash": "^4.17.5",
     "oauth2-server": "^3.0.0",
