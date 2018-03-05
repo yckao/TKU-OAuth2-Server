@@ -1,0 +1,6 @@
+export POSTGRES_HOST="127.0.0.1" 
+export POSTGRES_PORT="5432"
+export POSTGRES_DATABASE="postgres"
+export POSTGRES_USERNAME="postgres"
+export POSTGRES_PASSWORD="0ff27b2d88a16cbd12ee0f72aae2f00f6fdeb05b"
+export AES_KEY="32bytes=KEY=In=Development=yckao"
