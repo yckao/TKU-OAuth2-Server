@@ -3,6 +3,6 @@ const path = require('path');
 module.exports = {
   'config': path.resolve('config', 'postgres.js'),
   'models-path': path.resolve('lib', 'sequelize', 'models'),
-  'seeders-path': 'seeder',
+  'seeders-path': 'seeders',
   'migrations-path': 'migrations'
 }
