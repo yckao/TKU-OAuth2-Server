@@ -1,20 +1,21 @@
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('clients', {
-      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
-      clientId: { type: Sequelize.STRING, allowNull: false, unique: true },
-      clientSecret: { type: Sequelize.STRING, allowNull: true },
-      redirectUris: { type: Sequelize.ARRAY(Sequelize.TEXT), allowNull: true },
-      accessTokenLifetime: { type: Sequelize.INTEGER, allowNull: true },
-      refreshTokenLifetime: { type: Sequelize.INTEGER, allowNull: true },
-      createdAt: { type: Sequelize.DATE, allowNull: false },
-      updatedAt: { type: Sequelize.DATE, allowNull: false }
-    })
-
     await queryInterface.createTable('users', {
       id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
       studentId: { type: Sequelize.STRING, allowNull: false, unique: true },
       password: { type: Sequelize.STRING, allowNull: false },
+      createdAt: { type: Sequelize.DATE, allowNull: false },
+      updatedAt: { type: Sequelize.DATE, allowNull: false }
+    })
+
+    await queryInterface.createTable('clients', {
+      id: { type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true },
+      clientId: { type: Sequelize.STRING, allowNull: false, unique: true },
+      clientSecret: { type: Sequelize.STRING, allowNull: true },
+      userId: { type: Sequelize.INTEGER, allowNull: true },
+      redirectUris: { type: Sequelize.ARRAY(Sequelize.TEXT), allowNull: true },
+      accessTokenLifetime: { type: Sequelize.INTEGER, allowNull: true },
+      refreshTokenLifetime: { type: Sequelize.INTEGER, allowNull: true },
       createdAt: { type: Sequelize.DATE, allowNull: false },
       updatedAt: { type: Sequelize.DATE, allowNull: false }
     })
@@ -42,6 +43,16 @@ module.exports = {
       userId: { type: Sequelize.INTEGER, allowNull: false },
       createdAt: { type: Sequelize.DATE, allowNull: false },
       updatedAt: { type: Sequelize.DATE, allowNull: false }
+    })
+
+    await queryInterface.addConstraint('clients', ['userId'], {
+      type: 'foreign key',
+      references: {
+        table: 'users',
+        field: 'id'
+      },
+      onDelete: 'cascade',
+      onUpdate: 'cascade'
     })
 
     await queryInterface.addConstraint('tokens', ['clientId'], {
@@ -88,7 +99,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
     await queryInterface.dropTable('codes')
     await queryInterface.dropTable('tokens')
-    await queryInterface.dropTable('users')
     await queryInterface.dropTable('clients')
+    await queryInterface.dropTable('users')
   }
 }
