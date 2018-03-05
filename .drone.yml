@@ -1,0 +1,5 @@
+pipeline:
+  lint:
+    image: node:9-slim
+    commands:
+      - npm run lint
