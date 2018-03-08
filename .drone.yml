@@ -13,8 +13,6 @@ pipeline:
     commands:
       - yarn install
       - npm run lint
-    volumes:
-      - ./node_modules
 
   rebuild-cache:
     image: drillster/drone-volume-cache
