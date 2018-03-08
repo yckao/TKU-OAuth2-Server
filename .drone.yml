@@ -1,5 +1,13 @@
 
 pipeline:
+  restore-cache:
+    image: drillster/drone-volume-cache
+    restore: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
+
   lint:
     image: node:9-slim
     commands:
@@ -7,3 +15,11 @@ pipeline:
       - npm run lint
     volumes:
       - ./node_modules
+      
+  rebuild-cache:
+    image: drillster/drone-volume-cache
+    rebuild: true
+    mount:
+      - ./node_modules
+    volumes:
+      - /tmp/cache:/cache
