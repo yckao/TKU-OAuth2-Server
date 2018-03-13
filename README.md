@@ -1,5 +1,6 @@
 # TKU OAuth2 Server
 ![build status](https://ci.yckao.net/api/badges/yckao/TKU-OAuth2-Server/status.svg)
+
 ## About This Project
 
 Tamkang University has own SSO login entry.
